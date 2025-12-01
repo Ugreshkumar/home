@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>दिमाग खराब - Student Portal</title>
+    <!-- Tailwind CSS for Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0d9488', // Teal-600
+                        secondary: '#111827', // Gray-900
+                        accent: '#1f2937', // Gray-800
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111827;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0d9488;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0f766e;
+        }
+    </style>
+</head>
+<body class="bg-secondary text-gray-300 font-sans selection:bg-primary selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-secondary/90 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <span class="text-2xl font-bold text-white">दिमाग <span class="text-primary">खराब</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#about" class="hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="#services" class="hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Suvidhayein</a>
+                        <a href="#contact" class="bg-primary hover:bg-teal-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-all transform hover:scale-105">Contact Me</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div class="md:hidden hidden bg-accent" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#about" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#services" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium">Suvidhayein</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="text-primary block px-3 py-2 rounded-md text-base font-bold">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+        <!-- Background Decor -->
+        <div class="absolute top-20 right-0 w-72 h-72 bg-primary/20 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-20 left-0 w-72 h-72 bg-purple-600/20 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="fade-in">
+                <p class="text-primary font-medium mb-4 text-lg">Swagat hai, main hoon</p>
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                    Ugresh <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-200">Kumar</span>
+                </h1>
+                <p class="text-gray-400 text-lg mb-8 max-w-lg leading-relaxed">
+                    Hamara uddeshya zarooratmand logon ki madad karna aur students ko exam taiyari, college notifications aur computer tools provide karna hai.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#services" class="bg-primary hover:bg-teal-700 text-white px-8 py-3 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg shadow-teal-500/20">
+                        Suvidhayein Dekhein
+                    </a>
+                    <a href="#contact" class="border border-gray-600 hover:border-white text-white px-8 py-3 rounded-full font-medium transition-all hover:bg-white/5">
+                        Sampark Karein
+                    </a>
+                </div>
+            </div>
+            
+            <div class="relative fade-in delay-200 flex justify-center">
+                <div class="relative w-72 h-72 md:w-96 md:h-96">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary to-purple-600 rounded-full animate-pulse blur-xl opacity-50"></div>
+                    <!-- Using a student/generic avatar as placeholder -->
+                    <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Ugresh&backgroundColor=b6e3f4" alt="Profile" class="relative z-10 w-full h-full object-cover rounded-full border-4 border-secondary shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-accent/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">About Me</h2>
+                <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="bg-secondary p-8 rounded-2xl shadow-xl border border-gray-800 transform hover:scale-[1.02] transition-transform duration-300">
+                    <h3 class="text-2xl font-bold text-primary mb-6">Personal Details</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4 p-3 bg-accent/30 rounded-lg">
+                            <i class="fas fa-user text-primary text-xl w-8"></i>
+                            <div>
+                                <p class="text-xs text-gray-500">Name</p>
+                                <p class="text-white font-medium">Ugresh Kumar</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 p-3 bg-accent/30 rounded-lg">
+                            <i class="fas fa-map-marker-alt text-primary text-xl w-8"></i>
+                            <div>
+                                <p class="text-xs text-gray-500">Address</p>
+                                <p class="text-white font-medium">Kondagaon (C.G), 494226</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 p-3 bg-accent/30 rounded-lg">
+                            <i class="fas fa-envelope text-primary text-xl w-8"></i>
+                            <div>
+                                <p class="text-xs text-gray-500">Email</p>
+                                <p class="text-white font-medium">vkcmodel@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 p-3 bg-accent/30 rounded-lg">
+                            <i class="fas fa-phone text-primary text-xl w-8"></i>
+                            <div>
+                                <p class="text-xs text-gray-500">Mobile</p>
+                                <p class="text-white font-medium">626071****</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Mera Uddeshya (Objective)</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Is website "Dimag Kharab" ka mukhya uddeshya un sabhi zarooratmand logon ki madad karna hai jo education aur technology se judna chahte hain. 
+                    </p>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        Hum yahan aapko college se judi sabhi notification, computer tools aur competitive exams ki taiyari ke liye study material provide karenge. Kondagaon aur aas-paas ke students ke liye yeh ek digital sahayata kendra hai.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-3"></i>
+                            <span class="text-gray-300">Education Support</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-3"></i>
+                            <span class="text-gray-300">Latest Notifications</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-3"></i>
+                            <span class="text-gray-300">Technical Help</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Suvidha Section -->
+    <section id="services" class="py-20 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Hamari Suvidhayein</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Students aur zarooratmand logon ke liye free resources.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-accent/30 p-8 rounded-2xl hover:bg-accent/50 transition-colors border border-gray-800 hover:border-primary group">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <i class="fas fa-university text-2xl text-primary group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">College Notifications</h3>
+                    <p class="text-gray-400">Sabhi prakar ki college news, admission updates, aur exam dates ki jaankari yahan milegi.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-accent/30 p-8 rounded-2xl hover:bg-accent/50 transition-colors border border-gray-800 hover:border-primary group">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <i class="fas fa-laptop-code text-2xl text-primary group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Computer Tools</h3>
+                    <p class="text-gray-400">Computer seekhne aur zaruri softwares/tools ke baare mein puri help aur guidance.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-accent/30 p-8 rounded-2xl hover:bg-accent/50 transition-colors border border-gray-800 hover:border-primary group">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <i class="fas fa-book-reader text-2xl text-primary group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Exam Preparation</h3>
+                    <p class="text-gray-400">Competitive exams ki taiyari ke liye study material, notes aur tips.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-accent/50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Sampark Karein</h2>
+                    <p class="text-gray-400 mb-10 leading-relaxed">
+                        Agar aapko kisi bhi tarah ki madad chahiye ya koi sawal hai, toh aap humse seedhe sampark kar sakte hain. Hum aapki madad ke liye taiyar hain.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center text-primary flex-shrink-0">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium mb-1">Email</h4>
+                                <p class="text-gray-400">vkcmodel@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center text-primary flex-shrink-0">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium mb-1">Phone</h4>
+                                <p class="text-gray-400">+91 626071****</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center text-primary flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium mb-1">Location</h4>
+                                <p class="text-gray-400">Kondagaon (C.G), 494226</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-secondary p-8 rounded-2xl border border-gray-800">
+                    <form onsubmit="handleSubmit(event)" id="contactForm">
+                        <div class="mb-6">
+                            <label for="name" class="block text-sm font-medium text-gray-400 mb-2">Aapka Naam</label>
+                            <input type="text" id="name" required class="w-full bg-accent border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="Yahan naam likhein">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-sm font-medium text-gray-400 mb-2">Email Address (Agar ho toh)</label>
+                            <input type="email" id="email" class="w-full bg-accent border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="email@example.com">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium text-gray-400 mb-2">Sandesh / Message</label>
+                            <textarea id="message" rows="4" required class="w-full bg-accent border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="Apni baat yahan likhein..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary hover:bg-teal-700 text-white font-medium py-3 rounded-lg transition-all transform hover:scale-[1.02] shadow-lg shadow-teal-500/20">
+                            Sandesh Bheinjein <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                    <!-- Success Message (Hidden by default) -->
+                    <div id="successMessage" class="hidden mt-4 bg-green-900/30 text-green-400 border border-green-800 rounded-lg p-4 text-center">
+                        <i class="fas fa-check-circle mr-2"></i> Message safalta purvak bheja gaya!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary border-t border-gray-800 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <span class="text-2xl font-bold text-white">दिमाग <span class="text-primary">खराब.</span></span>
+            </div>
+            <p class="text-gray-500 text-sm">
+                &copy; 2025 All rights reserved. Created by Ugresh Kumar.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth Scroll for Navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Contact Form Handling (Simulation)
+        function handleSubmit(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerHTML;
+            
+            // Loading state
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Bhej raha hai...';
+            btn.disabled = true;
+            btn.classList.add('opacity-75');
+
+            // Simulate server delay
+            setTimeout(() => {
+                document.getElementById('contactForm').reset();
+                document.getElementById('successMessage').classList.remove('hidden');
+                
+                // Reset button
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                btn.classList.remove('opacity-75');
+
+                // Hide success message after 3 seconds
+                setTimeout(() => {
+                    document.getElementById('successMessage').classList.add('hidden');
+                }, 3000);
+            }, 1500);
+        }
+
+        // Navbar blur effect on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
