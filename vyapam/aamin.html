@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CG MN Patwari Exam Notes & MCQ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Hind', sans-serif;
+            background-color: #f0fdf4; /* Very light green bg */
+        }
+        .section-card {
+            transition: transform 0.2s;
+        }
+        .section-card:hover {
+            transform: translateY(-2px);
+        }
+        .option-btn {
+            transition: all 0.2s;
+        }
+        .option-btn:hover:not(:disabled) {
+            background-color: #f0fdf4;
+            border-color: #10b981;
+        }
+        .correct {
+            background-color: #d1fae5 !important;
+            border-color: #059669 !important;
+            color: #065f46 !important;
+        }
+        .wrong {
+            background-color: #fee2e2 !important;
+            border-color: #dc2626 !important;
+            color: #991b1b !important;
+        }
+        @media print {
+            .no-print {
+                display: none;
+            }
+            body {
+                background-color: white;
+            }
+            .shadow-lg {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-emerald-700 to-teal-600 text-white py-8 shadow-lg print:bg-white print:text-black">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-2">छत्तीसगढ़ MN पटवारी परीक्षा</h1>
+            <p class="text-xl opacity-90">संपूर्ण स्टडी नोट्स एवं ऑनलाइन टेस्ट सीरीज</p>
+            <button onclick="window.print()" class="no-print mt-4 bg-white text-emerald-700 px-6 py-2 rounded-full font-semibold hover:bg-emerald-50 transition shadow-md flex items-center justify-center mx-auto gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                PDF डाउनलोड / प्रिंट करें
+            </button>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-4 py-8 max-w-5xl">
+
+        <!-- 1. Exam Pattern Section -->
+        <section class="mb-10 bg-white rounded-xl shadow-lg overflow-hidden border-t-4 border-emerald-500">
+            <div class="p-6">
+                <h2 class="text-2xl font-bold text-emerald-800 mb-4 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-600"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    1. परीक्षा पैटर्न (Exam Pattern)
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
+                    <div class="bg-emerald-50 p-4 rounded-lg border border-emerald-100">
+                        <span class="block text-3xl font-bold text-emerald-600">150</span>
+                        <span class="text-sm font-semibold text-gray-600">कुल प्रश्न</span>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                        <span class="block text-3xl font-bold text-blue-600">150</span>
+                        <span class="text-sm font-semibold text-gray-600">कुल अंक</span>
+                    </div>
+                    <div class="bg-orange-50 p-4 rounded-lg border border-orange-100">
+                        <span class="block text-3xl font-bold text-orange-600">3 घंटे</span>
+                        <span class="text-sm font-semibold text-gray-600">समय अवधि</span>
+                    </div>
+                    <div class="bg-red-50 p-4 rounded-lg border border-red-100">
+                        <span class="block text-3xl font-bold text-red-600">1/4</span>
+                        <span class="text-sm font-semibold text-gray-600">Negative Marking</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. MCQ Practice Section (NEW) -->
+        <section id="mcq-section" class="mb-12 no-print">
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden border border-gray-200">
+                <div class="bg-indigo-600 p-4 text-white flex justify-between items-center">
+                    <h2 class="text-2xl font-bold flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+                        MCQ प्रैक्टिस टेस्ट
+                    </h2>
+                    <span id="score-display" class="font-mono text-lg bg-indigo-700 px-3 py-1 rounded hidden">Score: 0</span>
+                </div>
+                
+                <div class="p-6">
+                    <!-- Start Screen -->
+                    <div id="start-screen" class="text-center py-8">
+                        <div class="mb-6 text-indigo-100 bg-indigo-900 w-20 h-20 rounded-full flex items-center justify-center mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">अपनी तैयारी चेक करें</h3>
+                        <p class="text-gray-600 mb-6">इस टेस्ट में छत्तीसगढ़ सामान्य ज्ञान, कंप्यूटर, गणित, और हिंदी के मिक्स प्रश्न शामिल हैं।</p>
+                        <p class="text-sm text-gray-500 mb-6">कुल प्रश्न: 50 | समय: असीमित</p>
+                        <button onclick="startQuiz()" class="bg-indigo-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-indigo-700 transition transform hover:scale-105 shadow-md">
+                            टेस्ट शुरू करें (Start Test)
+                        </button>
+                    </div>
+
+                    <!-- Quiz Interface -->
+                    <div id="quiz-interface" class="hidden">
+                        <div class="flex justify-between items-center mb-4 text-sm text-gray-500">
+                            <span id="question-counter">प्रश्न 1 / 50</span>
+                            <span id="category-badge" class="bg-gray-100 px-2 py-1 rounded text-xs uppercase font-bold tracking-wide">Category</span>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 id="question-text" class="text-xl font-semibold text-gray-800 leading-relaxed">
+                                प्रश्न यहाँ आएगा...
+                            </h3>
+                        </div>
+
+                        <div id="options-container" class="space-y-3 mb-6">
+                            <!-- Options will be injected here -->
+                        </div>
+
+                        <div class="flex justify-between items-center border-t pt-4">
+                            <div id="feedback-msg" class="font-bold"></div>
+                            <button id="next-btn" onclick="nextQuestion()" class="bg-gray-800 text-white px-6 py-2 rounded-lg font-semibold hover:bg-gray-900 disabled:opacity-50 disabled:cursor-not-allowed hidden">
+                                अगला प्रश्न &rarr;
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Result Screen -->
+                    <div id="result-screen" class="hidden text-center py-8">
+                        <h3 class="text-3xl font-bold text-gray-800 mb-4">टेस्ट समाप्त!</h3>
+                        <div class="text-6xl font-bold text-indigo-600 mb-2" id="final-score">0</div>
+                        <p class="text-gray-600 mb-8">आपका स्कोर</p>
+                        
+                        <div class="flex justify-center gap-4">
+                            <button onclick="location.reload()" class="border-2 border-indigo-600 text-indigo-600 px-6 py-2 rounded-lg font-bold hover:bg-indigo-50 transition">
+                                नोट्स पढ़ें
+                            </button>
+                            <button onclick="resetQuiz()" class="bg-indigo-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-indigo-700 transition shadow-md">
+                                दोबारा टेस्ट दें
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. CG Special Section -->
+        <section class="mb-10">
+            <div class="flex items-center gap-2 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-orange-600"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <h2 class="text-2xl font-bold text-gray-800">3. छत्तीसगढ़ स्पेशल (Quick Revision)</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- CG History & Geography -->
+                <div class="bg-white rounded-xl shadow-md p-5 border-l-4 border-orange-500 section-card">
+                    <h3 class="text-lg font-bold text-orange-700 mb-3 border-b pb-2">🗺️ भूगोल और नदियाँ</h3>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li><span class="font-bold">छत्तीसगढ़ की गंगा:</span> महानदी (सिहावा पर्वत से उद्गम)।</li>
+                        <li><span class="font-bold">भारत का नियाग्रा:</span> चित्रकोट जलप्रपात (इन्द्रावती नदी, बस्तर)।</li>
+                        <li><span class="font-bold">सबसे ऊँचा जलप्रपात:</span> तीरथगढ़ (मुनगाबहार नदी)।</li>
+                        <li><span class="font-bold">कर्क रेखा:</span> कोरिया, सूरजपुर, बलरामपुर से गुजरती है।</li>
+                        <li><span class="font-bold">मैनपाट:</span> 'छत्तीसगढ़ का शिमला' (सरगुजा जिला)।</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md p-5 border-l-4 border-orange-500 section-card">
+                    <h3 class="text-lg font-bold text-orange-700 mb-3 border-b pb-2">🏛️ इतिहास और प्रशासन</h3>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li><span class="font-bold">स्थापना:</span> 1 नवंबर 2000 (26वां राज्य)।</li>
+                        <li><span class="font-bold">प्रथम मुख्यमंत्री:</span> श्री अजीत जोगी।</li>
+                        <li><span class="font-bold">कलचुरी वंश:</span> छत्तीसगढ़ में सर्वाधिक समय तक शासन करने वाला वंश।</li>
+                        <li><span class="font-bold">भोरमदेव मंदिर:</span> 'छत्तीसगढ़ का खजुराहो' (कवर्धा)।</li>
+                        <li><span class="font-bold">शहीद वीर नारायण सिंह:</span> सोनाखान विद्रोह (1857)।</li>
+                    </ul>
+                </div>
+
+                <!-- Culture & Tribes -->
+                <div class="bg-white rounded-xl shadow-md p-5 border-l-4 border-orange-500 section-card md:col-span-2">
+                    <h3 class="text-lg font-bold text-orange-700 mb-3 border-b pb-2">🎨 संस्कृति, जनजातियाँ और त्योहार</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li><span class="font-bold">प्रमुख जनजाति:</span> गोंड (सबसे बड़ी), बैगा (विशेष पिछड़ी)।</li>
+                            <li><span class="font-bold">हरेली:</span> किसानों का प्रमुख त्योहार (श्रावण अमावस्या)।</li>
+                            <li><span class="font-bold">छेराछेरा:</span> पौष पूर्णिमा (दान का पर्व)।</li>
+                        </ul>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li><span class="font-bold">पंडवानी:</span> तीजन बाई (कापालिक शैली), झाडूराम देवांगन।</li>
+                            <li><span class="font-bold">राउत नाचा:</span> यादव समाज द्वारा (दीपावली के बाद)।</li>
+                            <li><span class="font-bold">बस्तर दशहरा:</span> 75 दिनों तक चलने वाला विश्व प्रसिद्ध पर्व।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Important Expected Questions Section -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                2. महत्वपूर्ण संभावित प्रश्न (Subject Wise)
+            </h2>
+
+            <!-- Maths -->
+             <div class="bg-white rounded-lg shadow p-5 mb-6">
+                <h3 class="text-lg font-bold text-blue-700 mb-3 bg-blue-50 p-2 rounded inline-block">🧮 गणित (Maths) - High Yield Formulae</h3>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                    <div>
+                        <p class="font-semibold text-gray-700">Q. 400 का 25% + 200 का 10% कितना होगा?</p>
+                        <p class="text-gray-500 italic mb-2">उत्तर: (400×25/100) + (200×10/100) = 100 + 20 = 120</p>
+
+                        <p class="font-semibold text-gray-700">Q. औसत (Average):</p>
+                        <p class="text-gray-500 italic mb-2">सूत्र: संख्याओं का योग / कुल संख्या</p>
+
+                        <p class="font-semibold text-gray-700">Q. A और B की आयु का अनुपात 3:4 है। यदि योग 28 वर्ष है, तो B की आयु?</p>
+                        <p class="text-gray-500 italic">उत्तर: 3x + 4x = 28 => 7x=28 => x=4. B = 4×4 = 16 वर्ष।</p>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded">
+                        <h4 class="font-bold text-gray-800 mb-2">महत्वपूर्ण टॉपिक्स:</h4>
+                        <ul class="list-disc list-inside space-y-1 text-gray-600">
+                            <li>LCM और HCF (भिन्नों का ल.स.)</li>
+                            <li>समय और कार्य (M1D1 = M2D2)</li>
+                            <li>साधारण ब्याज (SI = P×R×T/100)</li>
+                            <li>लाभ-हानि (प्रतिशत गणना)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Computer -->
+             <div class="bg-white rounded-lg shadow p-5 mb-6">
+                <h3 class="text-lg font-bold text-purple-700 mb-3 bg-purple-50 p-2 rounded inline-block">💻 कंप्यूटर (Computer Knowledge)</h3>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start gap-2">
+                            <span class="text-purple-500 font-bold">Q.</span>
+                             <div>
+                                <span class="font-semibold">Cut, Copy, Paste की शॉर्टकट की?</span><br>
+                                <span class="text-gray-600">Ctrl+X, Ctrl+C, Ctrl+V</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-purple-500 font-bold">Q.</span>
+                            <div>
+                                <span class="font-semibold">RAM का फुल फॉर्म?</span><br>
+                                <span class="text-gray-600">Random Access Memory (Volatile Memory).</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-purple-500 font-bold">Q.</span>
+                            <div>
+                                <span class="font-semibold">इनपुट डिवाइस के उदाहरण:</span><br>
+                                <span class="text-gray-600">कीबोर्ड, माउस, स्कैनर।</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start gap-2">
+                            <span class="text-purple-500 font-bold">Q.</span>
+                            <div>
+                                <span class="font-semibold">इंटरनेट में 'WWW' का आविष्कारक?</span><br>
+                                <span class="text-gray-600">Tim Berners-Lee.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-purple-500 font-bold">Q.</span>
+                            <div>
+                                <span class="font-semibold">MS Excel में फार्मूला किससे शुरू होता है?</span><br>
+                                <span class="text-gray-600">= (Equal sign) से।</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Reasoning & GK Mix -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg shadow p-5">
+                    <h3 class="text-lg font-bold text-teal-700 mb-3 bg-teal-50 p-2 rounded inline-block">🧠 रीजनिंग (Reasoning)</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li>
+                            <p class="font-semibold">1. कोडिंग-डिकोडिंग:</p>
+                            <p class="text-gray-600">यदि CAT = 24 है (C=3, A=1, T=20), तो DOG = ? (4+15+7 = 26)</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold">2. नंबर सीरीज़:</p>
+                            <p class="text-gray-600">2, 4, 8, 16, ? (उत्तर: 32 - दुगुना हो रहा है)</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold">3. दिशा (Direction):</p>
+                            <p class="text-gray-600">दाएं (Right) = Clockwise, बाएं (Left) = Anti-clockwise.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-5">
+                    <h3 class="text-lg font-bold text-red-700 mb-3 bg-red-50 p-2 rounded inline-block">🇮🇳 भारत सामान्य ज्ञान (India GK)</h3>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li>✅ <span class="font-semibold">संविधान:</span> मौलिक अधिकार (भाग-3), अनुच्छेद 32 (संवैधानिक उपचार)।</li>
+                        <li>✅ <span class="font-semibold">इतिहास:</span> 1857 की क्रांति, गांधी युग (1915-1947)।</li>
+                        <li>✅ <span class="font-semibold">भूगोल:</span> रबी और खरीफ फसलें, भारत की नदियाँ।</li>
+                        <li>✅ <span class="font-semibold">अर्थव्यवस्था:</span> नीति आयोग, GST (1 जुलाई 2017)।</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer / Motivation -->
+        <footer class="text-center mt-12 mb-6">
+            <div class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold mb-2">तैयारी मंत्र</h3>
+                <p class="italic text-emerald-100">"सफलता का कोई शॉर्टकट नहीं होता, लेकिन सही दिशा में की गई मेहनत मंजिल तक जल्दी पहुँचाती है।"</p>
+                <div class="mt-4 font-semibold">Best of Luck for your Exam! 👍</div>
+            </div>
+            <p class="text-gray-500 text-sm mt-4">Generated by AI Assistant • For Study Purpose Only</p>
+        </footer>
+
+    </div>
+
+    <!-- Script for MCQ Logic -->
+    <script>
+        // Question Library - You can add up to 500+ questions here
+        const questionBank = [
+            // CG GK
+            { q: "छत्तीसगढ़ राज्य का स्थापना दिवस कब मनाया जाता है?", options: ["1 नवंबर", "15 अगस्त", "26 जनवरी", "1 दिसंबर"], answer: 0, category: "CG GK" },
+            { q: "छत्तीसगढ़ के प्रथम मुख्यमंत्री कौन थे?", options: ["रमन सिंह", "भूपेश बघेल", "अजीत जोगी", "श्यामाचरण शुक्ल"], answer: 2, category: "CG GK" },
+            { q: "छत्तीसगढ़ का 'खजुराहो' किसे कहा जाता है?", options: ["भोरमदेव", "सिरपुर", "मल्हार", "तालागाँव"], answer: 0, category: "CG GK" },
+            { q: "चित्रकोट जलप्रपात किस नदी पर स्थित है?", options: ["महानदी", "शिवनाथ", "हसदेव", "इन्द्रावती"], answer: 3, category: "CG GK" },
+            { q: "छत्तीसगढ़ का राज्य पक्षी क्या है?", options: ["मोर", "पहाड़ी मैना", "नीलकंठ", "गौरैया"], answer: 1, category: "CG GK" },
+            { q: "छत्तीसगढ़ का 'शिमला' किसे कहा जाता है?", options: ["मैनपाट", "बैलाडीला", "चिरमिरी", "अम्बिकापुर"], answer: 0, category: "CG GK" },
+            { q: "महानदी का उद्गम स्थल कहाँ है?", options: ["मैनपाट", "सिहावा पर्वत", "बैलाडीला", "देवगढ़"], answer: 1, category: "CG GK" },
+            { q: "छत्तीसगढ़ में 'कर्क रेखा' कितने जिलों से गुजरती है?", options: ["2", "3", "4", "5"], answer: 1, category: "CG GK" },
+            { q: "शहीद वीर नारायण सिंह का संबंध किस स्थान से था?", options: ["रायपुर", "बस्तर", "सोनाखान", "कवर्धा"], answer: 2, category: "CG GK" },
+            { q: "छत्तीसगढ़ की सबसे बड़ी जनजाति कौन सी है?", options: ["बैगा", "गोंड", "उरांव", "कोरवा"], answer: 1, category: "CG GK" },
+            { q: "तीजन बाई का संबंध किस लोककला से है?", options: ["भरथरी", "पंडवानी", "राउत नाचा", "पंथ नृत्य"], answer: 1, category: "CG GK" },
+            { q: "मिनीमाता बांध (हसदेव बांगो) किस जिले में है?", options: ["कोरबा", "बिलासपुर", "जांजगीर", "रायगढ़"], answer: 0, category: "CG GK" },
+            { q: "छत्तीसगढ़ का एकमात्र जूट मिल कहाँ स्थित है?", options: ["रायगढ़", "रायपुर", "दुर्ग", "बिलासपुर"], answer: 0, category: "CG GK" },
+            
+            // Computer
+            { q: "कंप्यूटर का दिमाग (Brain) किसे कहते हैं?", options: ["RAM", "CPU", "Hard Disk", "Monitor"], answer: 1, category: "Computer" },
+            { q: "इनमें से कौन सा इनपुट डिवाइस नहीं है?", options: ["Mouse", "Keyboard", "Printer", "Scanner"], answer: 2, category: "Computer" },
+            { q: "1 Kilobyte (KB) किसके बराबर है?", options: ["1000 Bytes", "1024 Bytes", "1024 Bits", "1000 Bits"], answer: 1, category: "Computer" },
+            { q: "Ctrl + C का उपयोग किसके लिए होता है?", options: ["Cut", "Paste", "Copy", "Undo"], answer: 2, category: "Computer" },
+            { q: "WWW का पूर्ण रूप क्या है?", options: ["World Web Wide", "World Wide Web", "Wide World Web", "Web World Wide"], answer: 1, category: "Computer" },
+            { q: "RAM किस प्रकार की मेमोरी है?", options: ["Volatile (अस्थायी)", "Non-Volatile (स्थायी)", "Secondary", "None"], answer: 0, category: "Computer" },
+            { q: "MS Excel में फाइल का एक्सटेंशन क्या होता है?", options: [".doc", ".xls / .xlsx", ".ppt", ".txt"], answer: 1, category: "Computer" },
+            { q: "सबसे तेज मेमोरी कौन सी होती है?", options: ["RAM", "Cache Memory", "Hard Disk", "DVD"], answer: 1, category: "Computer" },
+            
+            // Maths & Reasoning
+            { q: "यदि A:B = 2:3 और B:C = 4:5 है, तो A:B:C क्या होगा?", options: ["8:12:15", "6:12:15", "8:10:15", "2:3:5"], answer: 0, category: "Maths" },
+            { q: "एक त्रिभुज के तीनों कोणों का योग कितना होता है?", options: ["90°", "180°", "270°", "360°"], answer: 1, category: "Maths" },
+            { q: "श्रेणी पूरी करें: 2, 5, 10, 17, __?", options: ["24", "25", "26", "27"], answer: 2, category: "Reasoning" }, // +3, +5, +7, +9
+            { q: "500 का 20% कितना होगा?", options: ["50", "100", "20", "200"], answer: 1, category: "Maths" },
+            { q: "यदि 'CAT' को 'DBU' लिखा जाए, तो 'DOG' को क्या लिखा जाएगा?", options: ["EPH", "EPH", "FPH", "EOG"], answer: 0, category: "Reasoning" },
+            { q: "एक वर्ग (Square) की भुजा 5 सेमी है, उसका क्षेत्रफल क्या होगा?", options: ["20 सेमी²", "25 सेमी²", "10 सेमी²", "15 सेमी²"], answer: 1, category: "Maths" },
+            { q: "विषम शब्द चुनें (Find Odd one out):", options: ["बस", "स्कूटर", "कार", "हवाई जहाज"], answer: 3, category: "Reasoning" },
+            
+            // Hindi & English
+            { q: "'कमल' का पर्यायवाची शब्द नहीं है:", options: ["पंकज", "जलज", "सरोज", "पवन"], answer: 3, category: "Hindi" },
+            { q: "स्वर संधि के कितने भेद होते हैं?", options: ["3", "4", "5", "6"], answer: 2, category: "Hindi" },
+            { q: "'ईमानदार' का विलोम शब्द है:", options: ["बेईमान", "सच्चा", "नेक", "धोखेबाज"], answer: 0, category: "Hindi" },
+            { q: "Choose the correct spelling:", options: ["Grammer", "Grammar", "Gramar", "Gremmar"], answer: 1, category: "English" },
+            { q: "Antonym of 'Good' is:", options: ["Bad", "Nice", "Better", "Best"], answer: 0, category: "English" },
+            
+            // GK India
+            { q: "भारत का संविधान कब लागू हुआ?", options: ["15 अगस्त 1947", "26 नवंबर 1949", "26 जनवरी 1950", "2 अक्टूबर 1950"], answer: 2, category: "India GK" },
+            { q: "भारत की सबसे लंबी नदी कौन सी है?", options: ["यमुना", "गोदावरी", "गंगा", "नर्मदा"], answer: 2, category: "India GK" },
+            { q: "सौरमंडल का सबसे बड़ा ग्रह कौन सा है?", options: ["पृथ्वी", "मंगल", "बृहस्पति", "शनि"], answer: 2, category: "India GK" },
+            { q: "रिज़र्व बैंक ऑफ इंडिया (RBI) का मुख्यालय कहाँ है?", options: ["दिल्ली", "मुंबई", "कोलकाता", "चेन्नई"], answer: 1, category: "India GK" },
+            
+            // More Mix
+            { q: "छत्तीसगढ़ में 'हरेली' त्यौहार कब मनाया जाता है?", options: ["सावन अमावस्या", "कार्तिक पूर्णिमा", "भाद्रपद", "फाल्गुन"], answer: 0, category: "CG GK" },
+            { q: "बस्तर का दशहरा कितने दिनों तक चलता है?", options: ["10 दिन", "75 दिन", "50 दिन", "90 दिन"], answer: 1, category: "CG GK" },
+            { q: "छत्तीसगढ़ उच्च न्यायालय कहाँ स्थित है?", options: ["रायपुर", "दुर्ग", "बिलासपुर", "जगदलपुर"], answer: 2, category: "CG GK" },
+            { q: "कम्प्यूटर में 'Undo' के लिए शॉर्टकट की है?", options: ["Ctrl + Z", "Ctrl + Y", "Ctrl + U", "Ctrl + A"], answer: 0, category: "Computer" },
+            { q: "10 आदमी एक काम को 5 दिन में करते हैं, तो 5 आदमी उसे कितने दिन में करेंगे?", options: ["5 दिन", "10 दिन", "15 दिन", "20 दिन"], answer: 1, category: "Maths" }, // 10*5 = 50 units. 50/5 = 10 days
+            { q: "भारत का लौह पुरुष किसे कहा जाता है?", options: ["गांधी जी", "नेहरू जी", "सरदार पटेल", "भगत सिंह"], answer: 2, category: "India GK" },
+            { q: "पानीपत का प्रथम युद्ध कब हुआ था?", options: ["1526", "1556", "1761", "1857"], answer: 0, category: "India GK" },
+            { q: "छत्तीसगढ़ में लोकसभा की कितनी सीटें हैं?", options: ["90", "11", "5", "10"], answer: 1, category: "CG GK" },
+            { q: "इनमें से कौन सा सर्च इंजन है?", options: ["Google", "Facebook", "WhatsApp", "Instagram"], answer: 0, category: "Computer" },
+            { q: "LCD का फुल फॉर्म क्या है?", options: ["Liquid Crystal Display", "Light Crystal Display", "Liquid Circuit Display", "None"], answer: 0, category: "Computer" },
+            { q: "नीति आयोग का अध्यक्ष कौन होता है?", options: ["राष्ट्रपति", "प्रधानमंत्री", "वित्त मंत्री", "गृह मंत्री"], answer: 1, category: "India GK" },
+            { q: "छत्तीसगढ़ का राज्य पशु क्या है?", options: ["शेर", "वन भैंसा", "हाथी", "चीता"], answer: 1, category: "CG GK" },
+            { q: "रायपुर किस नदी के किनारे बसा है?", options: ["महानदी", "खारून", "शिवनाथ", "अर्पा"], answer: 1, category: "CG GK" }
+        ];
+
+        // State variables
+        let quizQuestions = [];
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let isAnswered = false;
+
+        function startQuiz() {
+            // Select 50 random questions or all if less than 50
+            const maxQuestions = 50;
+            const shuffled = [...questionBank].sort(() => 0.5 - Math.random());
+            quizQuestions = shuffled.slice(0, Math.min(maxQuestions, questionBank.length));
+            
+            currentQuestionIndex = 0;
+            score = 0;
+            
+            document.getElementById('start-screen').classList.add('hidden');
+            document.getElementById('result-screen').classList.add('hidden');
+            document.getElementById('quiz-interface').classList.remove('hidden');
+            document.getElementById('score-display').classList.remove('hidden');
+            document.getElementById('score-display').innerText = `Score: 0`;
+            
+            loadQuestion();
+        }
+
+        function loadQuestion() {
+            isAnswered = false;
+            const questionData = quizQuestions[currentQuestionIndex];
+            
+            // Update UI
+            document.getElementById('question-counter').innerText = `प्रश्न ${currentQuestionIndex + 1} / ${quizQuestions.length}`;
+            document.getElementById('category-badge').innerText = questionData.category;
+            document.getElementById('question-text').innerText = questionData.q;
+            document.getElementById('feedback-msg').innerText = '';
+            document.getElementById('next-btn').classList.add('hidden');
+
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+
+            questionData.options.forEach((opt, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn w-full text-left p-4 border rounded-lg bg-white shadow-sm font-medium text-gray-700 relative';
+                btn.innerHTML = `<span class="inline-block w-6 h-6 rounded-full bg-gray-200 text-center text-xs leading-6 mr-3 text-gray-600 font-bold">${String.fromCharCode(65 + index)}</span> ${opt}`;
+                btn.onclick = () => checkAnswer(index, btn);
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        function checkAnswer(selectedIndex, selectedBtn) {
+            if (isAnswered) return;
+            isAnswered = true;
+
+            const correctIndex = quizQuestions[currentQuestionIndex].answer;
+            const buttons = document.querySelectorAll('.option-btn');
+
+            if (selectedIndex === correctIndex) {
+                selectedBtn.classList.add('correct');
+                score++;
+                document.getElementById('feedback-msg').innerHTML = '<span class="text-green-600">✅ सही उत्तर!</span>';
+            } else {
+                selectedBtn.classList.add('wrong');
+                buttons[correctIndex].classList.add('correct'); // Show correct answer
+                document.getElementById('feedback-msg').innerHTML = '<span class="text-red-600">❌ गलत उत्तर!</span>';
+            }
+
+            // Update Score Display
+            document.getElementById('score-display').innerText = `Score: ${score}`;
+
+            // Show Next Button
+            document.getElementById('next-btn').classList.remove('hidden');
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < quizQuestions.length) {
+                loadQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            document.getElementById('quiz-interface').classList.add('hidden');
+            document.getElementById('result-screen').classList.remove('hidden');
+            document.getElementById('final-score').innerText = `${score} / ${quizQuestions.length}`;
+        }
+        
+        function resetQuiz() {
+            document.getElementById('result-screen').classList.add('hidden');
+            document.getElementById('start-screen').classList.remove('hidden');
+            document.getElementById('score-display').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
